@@ -17,7 +17,7 @@ def generate_text(prompt):
     message = completions.choices[0].text
     return message
 
-st.title("告白信生成器")
+st.title("告白文生成器")
 
 sender_interests = st.text_input("您的興趣是？")
 sender_abilities = st.text_input("您的能力是？")
@@ -26,11 +26,11 @@ sender_love_features = st.text_input("您為什麼喜歡對方？")
 recipient_interests = st.text_input("對方的興趣是？")
 recipient_features = st.text_input("對方的特點是？")
 
-prompt = (f"告白信。我的興趣是{sender_interests}，我的能力是{sender_abilities}，"
+prompt = (f"告白文。我的興趣是{sender_interests}，我的能力是{sender_abilities}，"
          f"我喜歡對方是因為{sender_love_features}。對方的興趣是{recipient_interests}，"
          f"對方的特點是{recipient_features}。")
 
-if st.button("生成告白信"):
+if st.button("生成告白文"):
     love_letter = generate_text(prompt)
-    st.write("生成的告白信：", love_letter)
+    st.write("生成的告白文：", love_letter)
 
