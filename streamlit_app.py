@@ -28,7 +28,7 @@ recipient_features = st.text_input("想對對方說的話？")
 
 prompt = (f"告白。我的興趣是{sender_interests}，我的能力是{sender_abilities}，"
          f"我喜歡對方是因為{sender_love_features}。對方的興趣是{recipient_interests}，"
-         f"我想對你說{recipient_features}！我喜歡你！請你和我交往！")
+         f"我想對你說{recipient_features}！"f"我喜歡你！請你和我交往！")
 
 if st.button("生成告白"):
     love_letter = generate_text(prompt)
