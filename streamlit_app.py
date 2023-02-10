@@ -34,5 +34,3 @@ if st.button("生成告白信"):
     love_letter = generate_text(prompt)
     st.write("生成的告白信：", love_letter)
 
-if __name__ == '__main__':
-    st.run(use_reloader=False)
